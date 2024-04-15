@@ -1,0 +1,60 @@
+/* 
+CSS stylesheet to style login portal
+
+Author: Aman Todi 
+*/
+
+#login_title {
+    text-align: center;
+    font-size: 125%;
+    font-family: Helvetica;
+    color: #002242;
+}
+
+/* Place info in the center */
+#login_container {
+    text-align: center;
+}
+
+/* Display failed attempts in red */
+#login_error {
+    color: #FF0000;
+}
+
+/* Style the email and password boxes */
+#email {
+    margin-left: 3vw;
+    width: 15vw;
+    height: 2.4vw;
+    background-color: #d7e9f7;
+    border: 0.5% #002242;
+}
+
+#password {
+    margin-left: 1vw;
+    width: 15vw;
+    height: 2.4vw;
+    background-color: #d7e9f7;
+    border: 0.5% #002242;
+}
+
+/* Style the login button */
+#login_button {
+    background-color: #002242;
+    width: 9vw;
+    height: 3.5vh;
+    color: #FFFFFF;
+    font-size: 90%;
+}
+
+/* Style the signup link */
+#signup_btn {
+    text-decoration: none;
+    background-color: #abc4d1;
+    width: 14vw;
+    height: 4vh;
+    color: #002242;
+    font-size: 110%;
+    margin: 1vh;
+    padding: 1.5vh;
+}

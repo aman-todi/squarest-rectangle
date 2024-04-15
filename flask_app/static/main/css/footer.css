@@ -1,0 +1,18 @@
+/* 
+CSS stylesheet for the footer of the pages of personal website
+
+Author: Aman Todi 
+*/
+
+/* Style the footer */
+.foot_text {
+    background-color:#abc4d1;
+    font-family: Helvetica;
+    width: 100%; /* stretch across the width of the screen */
+    height: 12vh;
+    text-align: center;
+    line-height: 5;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+}

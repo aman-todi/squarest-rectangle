@@ -1,0 +1,15 @@
+/* 
+CSS stylesheet for the header of the pages of personal website
+
+Author: Aman Todi 
+*/
+
+/* Implement a stable header image */
+#banner {
+    width: 100vw; /* stretch across width of the screen */
+    height: 10vh;
+    display: block;
+    margin: 0%;
+    padding: 0%;
+}
+

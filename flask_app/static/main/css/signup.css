@@ -1,0 +1,52 @@
+/* 
+CSS stylesheet to style sign in portal
+
+Author: Aman Todi 
+*/
+
+#signup_title {
+    text-align: center;
+    font-size: 125%;
+    font-family: Helvetica;
+    color: #002242;
+}
+
+/* Place items in the center */
+#signup_container {
+    text-align: center;
+}
+
+/* Style the email and password boxes */
+#email {
+    margin-left: 3vw;
+    width: 15vw;
+    height: 2.4vw;
+    background-color: #d7e9f7;
+    border: 0.5% #002242;
+}
+
+#password {
+    margin-left: 1vw;
+    width: 15vw;
+    height: 2.4vw;
+    background-color: #d7e9f7;
+    border: 0.5% #002242;
+}
+
+/* Style the sign up button */
+#signup_button {
+    background-color: #002242;
+    width: 10.5vw;
+    height: 3.5vh;
+    color: #FFFFFF;
+    font-size: 100%;
+}
+
+#signup_button:hover {
+    cursor: pointer;
+}
+
+/* Display failed sign up attempt in red */
+#signup_error {
+    color: #FF0000;
+}

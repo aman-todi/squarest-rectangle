@@ -1,0 +1,23 @@
+<!-- This HTML document allows users to post and view feedback for the website
+    
+    Author: Aman Todi
+-->
+
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/feedback.css') }}">
+{% endblock %}
+
+{% block maincontent %}
+<div class="basic user_feed">
+    <h3>Thank you for your feedback. Here's what others had to say:</h3> 
+    <!-- List all feedback -->
+    <ul>
+        {% for entry in feedback_data %}
+            <li>{{entry['name']}} said: {{entry['comment']}}</li>
+            <br>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

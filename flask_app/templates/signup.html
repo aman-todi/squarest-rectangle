@@ -1,0 +1,36 @@
+<!-- This HTML document creates a sign up portal
+    
+    Author: Aman Todi
+-->
+
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/signup.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="../static/main/js/signup.js" defer></script>
+{% endblock %}
+
+{% block maincontent %}
+<p id="signup_title">CREATE NEW ACCOUNT</p>
+<br></br>
+<div id="signup_container">
+    <!-- Display sign up info containers -->
+    <form id="signup_form">
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <!-- Sign Up -->
+        <input type="button" id="signup_button" value="Sign Up"/>
+        <br></br>
+        <!-- Display incorrect sign up-->
+        <div id="signup_error"></div>
+    </form>
+</div>
+{% endblock %}

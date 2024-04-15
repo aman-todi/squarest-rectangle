@@ -1,0 +1,10 @@
+/* 
+CSS stylesheet for the feedback display page of personal website
+
+Author: Aman Todi 
+*/
+
+/* Align text to the left */
+.user_feed {
+    text-align: left;
+}

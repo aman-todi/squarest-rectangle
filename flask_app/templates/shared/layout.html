@@ -1,0 +1,98 @@
+<!-- This tenplate creates a shared layout for the webpage
+
+    Author: Aman Todi
+-->
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Squarest Rectangle</title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/square_fav.ico') }}">
+  {% block extracss %}{% endblock %}
+  <script src="../../static/main/js/main.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  {% block extrajs %}{% endblock %}
+</head>
+
+<!-- Body of the HTML page -->
+<body class="parent">
+  <article>
+    <!-- The header -->
+    <header>
+      <img src="../static/main/images/banner.jpg" alt="Colorful sand dunes" loading="lazy" id="banner">
+    </header>
+
+    <!-- The navigation bar -->
+    <nav class="child_nav">
+      <div>
+        {% if user == 'Unknown' %}  
+        <p class="pg_title">Pick The Squarest Rectangle</p>
+        {% else %}
+        <p class="pg_title">Logged in as {{user}}</p>
+        {% endif %}
+      </div>
+      <div>
+          <div class="nav_menu">
+              <a class="text" href="/home">Home</a>
+              {% if user == 'Unknown' %}  
+              <a class="text" href="/login">Login</a>
+              {% else %}
+              <a class="text" href="/logout">Logout</a>
+              {% endif %}
+          </div>
+      </div>
+    </nav>
+
+    <!-- The main content  -->
+    <main class="child_main">
+      {% block maincontent %}{% endblock %}
+    </main>
+
+    <!-- Feedback form -->
+    <button id="feed_button">Feedback</button><!-- Feedback button -->
+    <div class="user_input">
+        <!-- Enable data registry and reroute to feedback page -->
+        <form action="/processfeedback" method="POST" enctype="multipart/form-data">
+            <h2>Feedback Space</h2>
+            <div>
+              <label for="name"></label>
+              <input title="Name of Reviewer" name="name" type="name" id="name" required placeholder="Name">                    
+            </div>
+            <div>                  
+              <label for="vtr_email"></label>
+              <input title="Email of Reviewer" name="email" type="email" id="vtr_email" required placeholder="Email">
+            </div>
+            <div>
+              <label for="comment"></label>
+              <!-- For longer text entry -->
+              <textarea id="comment" name="comment" required placeholder="Please enter feedback here!"></textarea>
+            </div>
+            <!-- Submit button -->
+            <input title="Submit feedback button" type="submit" id="submit_press" value="Submit">
+        </form>
+    </div>
+
+    <!-- The footer of the file -->
+    <footer>
+        <p class="foot_text">&#169 Aman Todi, 2024</p>
+    </footer>
+
+  </article>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+

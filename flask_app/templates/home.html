@@ -1,0 +1,75 @@
+<!-- This is the landing page of my Honors Project for CSE 482
+
+    Author: Aman Todi
+-->
+
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/calculator.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/ratioslider.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='main/css/rectangles.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+<script src="{{ url_for('static', filename='main/js/interactionData.js') }}" defer></script>
+<script src = "{{ url_for('static', filename='main/js/calculator.js') }}" defer></script>
+<script src = "{{ url_for('static', filename='main/js/ratioslider.js') }}" defer></script>
+<script src = "{{ url_for('static', filename='main/js/rectangles.js') }}" defer></script>
+{% endblock %}
+
+{% block maincontent %}
+<div class="question">
+  <p>Dimensions of four rectangles are given below. Which rectangle do you think looks more like a square?</p> 
+</div>
+
+<div class="basic panes">
+
+  <!-- Tool 1: Simple Calculator -->
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button class="calc operation">/</button>
+      <button class="calc operation">*</button>
+      <button class="calc operation">-</button>
+      <button class="calc operation">+</button>
+      <button class="calc digit">0</button>
+      <button class="calc digit">1</button>
+      <button class="calc digit">2</button>
+      <button class="calc digit">3</button>
+      <button class="calc digit">4</button>
+      <button class="calc digit">5</button>
+      <button class="calc digit">6</button>
+      <button class="calc digit">7</button>
+      <button class="calc digit">8</button>
+      <button class="calc digit">9</button>
+      <button id="equals">=</button>
+      <button id="clear">C</button>
+    </div>
+  </div>
+
+  <!-- Tool 2: Ratio Slider -->
+  <div class="ratio-slider">
+    <div class="slider-container">
+        <input type="range" id="slider1" min="0" max="100" value="50" orient="vertical">
+        <label for="slider1" style="background-color: #f2f2f2; padding: 5px; border-radius: 5px;">Value 1 : <span id="value1">50</span></label>
+    </div>   
+    <div class="slider-container">
+        <input type="range" id="slider2" min="0" max="100" value="50" orient="vertical">
+        <label for="slider2" style="background-color: #f2f2f2; padding: 5px; border-radius: 5px;">Value 2 : <span id="value2">50</span></label>
+    </div>    
+    <p style="background-color: #f2f2f2; padding: 5px">Ratio: <span id="ratio">1:1</span></p>
+  </div>
+
+  <!-- Display Options of Rectangle Dimensions -->
+  <div class="rectangles-container">
+    <div class="rectangle" dimensions="7x10">7 feet by 10 feet</div>
+    <div class="rectangle" dimensions="17x20">17 feet by 20 feet</div>
+    <div class="rectangle" dimensions="27x30">27 feet by 30 feet</div>
+    <div class="rectangle" dimensions="37x40">37 feet by 40 feet</div>
+  </div>
+</div>
+<div id="message-container"></div>
+{% endblock %}
+
+

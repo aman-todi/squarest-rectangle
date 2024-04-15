@@ -1,0 +1,51 @@
+/* Style the dimensions of rectangles */
+
+.rectangles-container {
+    display: grid;
+    width: 400px;
+    height: 42vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    margin-top: 2.5vh;
+}
+
+.rectangle {
+    padding: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #dceef1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+#message-container {
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.correct {
+    color: green;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width: 600px;
+    font-size: 150%;
+    text-align: center;
+}
+
+.incorrect {
+    color: red;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width: 600px;
+    font-size: 150%;
+    text-align: center;
+}
+
+.rectangle:hover {
+    border: 5px solid #ccc;;
+}

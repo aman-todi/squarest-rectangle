@@ -1,0 +1,119 @@
+/* 
+Primary CSS stylesheet for components of home page
+
+Author: Aman Todi 
+*/
+
+/* Refers to the body of HTML doc */
+.parent {
+    margin: 0vw; 
+    font-family: Helvetica;
+}
+
+/* Lay down the basic format for main section */
+.child_main {
+    min-height: 70vh;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    margin:0;
+    align-items: center;
+}
+
+
+.question {
+    font-family: Helvetica;
+    width: 90vw;
+    text-align: center;
+    margin: 2%;
+}
+
+/* Style containers within the main section */
+.basic {
+    font-family: Helvetica;
+    width: 90vw; /* limit width of container to 80% of the view */
+    text-align: center;
+    margin: 1%;
+    line-height: 1.5;
+}
+
+/* To display tools side by side */
+.panes {
+    margin-top: 2%;
+    height: 45vh;
+    display: flex;
+    flex-direction: row; /* Display multiple columns */
+    gap: 2vw;
+    border-right: 1vw #949494;
+}
+
+/* Format the Feedback button that displays on every page */
+#feed_button {
+    position: fixed;
+    display: block;
+    background-color: #040d46;
+    color: #ffffff;
+    transform: rotate(-90deg);
+    transform-origin:right;
+    top: 45vh;
+    right: 1%;
+}
+
+/* Style the container used to display the feedback form */
+.user_input {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 20vh;
+    left: 30vw;
+    width: 40vw;
+    height: 60vh;
+    display: none;
+    background-color: #67addb;
+    color: #040d46;
+    font-family: Helvetica;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Name of reviewer */
+#name {
+    margin: 2vh;
+    width: 80%;
+    height: 5vh;
+}
+
+/* Email of reviewer */
+#vtr_email {
+    margin: 2vh;
+    width: 80%;
+    height: 5vh;
+}
+
+/* Comments */
+#comment {
+    margin: 2vh;
+    width: 80%;
+    height: 15vh;
+}
+
+/* Submit feedback button */
+#submit_press {
+    margin: 2vh;
+    width: 60%;
+    height: 5vh;
+    font-size: 125%;
+    background-color: #002242;
+    color: #ffffff;
+}
+
+/* Format line breaks */
+.line_break {
+    width: 80vw; 
+    margin: 1%;
+}
+
+/* Larger text */
+.big_name {
+    font-size: 200%;
+}

@@ -1,0 +1,57 @@
+/* 
+CSS stylesheet for the navigation bar
+*/
+
+/* Style the container of the nav bar */
+.child_nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #002242;
+    color: #FFFFFF;
+    font-family: Helvetica;
+}
+
+/* Website Title */
+.pg_title {
+    line-height: 2;
+    width: 100%;
+    height: 50%;
+    padding-left: 1.5vw;
+    font-size: 110%;  
+}
+
+/* Make the menu within nav bar flexible as screen width varies */
+.nav_menu {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    font-size: 110%;
+    font-family: Helvetica;
+    padding-right: 3vw;
+}
+
+/* 
+Override defaults for Navbar links displaying as text
+*/
+.text {
+    width: 100%;
+    height: 50%;
+    padding-top: 4%;  
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* 
+Navbar options change color when hovered over
+
+Cursor changes to pointer to indicate clickable space
+*/
+.text:hover {
+    text-decoration: none;
+    color: #C0C0C0;
+    cursor: pointer;
+}
